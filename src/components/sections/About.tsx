@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Code2, Cpu, CheckCircle2, MapPin } from 'lucide-react';
+import { User, Code2, Cpu, CheckCircle2, MapPin, Terminal } from 'lucide-react';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 
 export const About: React.FC = () => {
@@ -61,18 +61,56 @@ export const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Column: Key Metrics & Technical DNA */}
-        <div className="lg:col-span-5 space-y-4">
-          <div className="p-6 sm:p-8 rounded-2xl glass-panel border border-white/10 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-electric/5 rounded-full blur-2xl group-hover:bg-cyan-electric/15 transition-all" />
+        {/* Right Column: Portrait Showcase & Technical DNA */}
+        <div className="lg:col-span-5 space-y-6">
+          {/* Cybernetic Portrait Card */}
+          <div className="relative rounded-2xl glass-panel border border-cyan-electric/30 p-3 sm:p-4 shadow-cyan-glow overflow-hidden group">
+            {/* Holographic Corner Brackets */}
+            <div className="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-cyan-electric pointer-events-none z-20" />
+            <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-cyan-electric pointer-events-none z-20" />
+            <div className="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-cyan-electric pointer-events-none z-20" />
+            <div className="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-cyan-electric pointer-events-none z-20" />
 
-            <h3 className="text-xs font-mono tracking-widest text-metallic-400 uppercase mb-4">
-              Creator DNA Matrix
+            {/* Photo Container */}
+            <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-void-900 border border-white/10">
+              <img
+                src="/safi-portrait.jpg"
+                alt="MD Mobasser Hasan Safi - Web Developer & Automation Creator"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+              />
+
+              {/* Cinematic Vignette Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-void-950 via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-cyan-electric/5 mix-blend-color-dodge pointer-events-none" />
+
+              {/* Bottom Metadata Pill on Image */}
+              <div className="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-void-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between">
+                <div>
+                  <div className="text-xs font-display font-bold text-white tracking-wide">
+                    {PERSONAL_INFO.name}
+                  </div>
+                  <div className="text-[10px] font-mono text-cyan-electric uppercase tracking-wider">
+                    S.T.D.R.A. Architect & Creator
+                  </div>
+                </div>
+                <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  ONLINE
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Creator DNA Matrix */}
+          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-white/10 relative overflow-hidden group">
+            <h3 className="text-xs font-mono tracking-widest text-metallic-400 uppercase mb-4 flex items-center justify-between">
+              <span>Creator DNA Matrix</span>
+              <Terminal className="w-3.5 h-3.5 text-cyan-electric" />
             </h3>
 
-            <div className="space-y-4">
+            <div className="space-y-3.5">
               <div>
-                <div className="flex justify-between text-xs font-mono mb-1.5">
+                <div className="flex justify-between text-xs font-mono mb-1">
                   <span className="text-metallic-200">Frontend Engineering (React / TS)</span>
                   <span className="text-cyan-electric">95%</span>
                 </div>
@@ -82,7 +120,7 @@ export const About: React.FC = () => {
               </div>
 
               <div>
-                <div className="flex justify-between text-xs font-mono mb-1.5">
+                <div className="flex justify-between text-xs font-mono mb-1">
                   <span className="text-metallic-200">Interactive 3D / WebGL (Three.js)</span>
                   <span className="text-cyan-electric">85%</span>
                 </div>
@@ -92,7 +130,7 @@ export const About: React.FC = () => {
               </div>
 
               <div>
-                <div className="flex justify-between text-xs font-mono mb-1.5">
+                <div className="flex justify-between text-xs font-mono mb-1">
                   <span className="text-metallic-200">Automation Pipelines & Workflows</span>
                   <span className="text-violet-400">90%</span>
                 </div>
@@ -102,7 +140,7 @@ export const About: React.FC = () => {
               </div>
 
               <div>
-                <div className="flex justify-between text-xs font-mono mb-1.5">
+                <div className="flex justify-between text-xs font-mono mb-1">
                   <span className="text-metallic-200">System Architecture (S.T.D.R.A.)</span>
                   <span className="text-cyan-electric">92%</span>
                 </div>
@@ -110,14 +148,6 @@ export const About: React.FC = () => {
                   <div className="h-full bg-gradient-to-r from-cyan-400 to-violet-500 w-[92%]" />
                 </div>
               </div>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
-              <span className="text-xs text-metallic-400">System Status</span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                Nominal & Active
-              </span>
             </div>
           </div>
         </div>

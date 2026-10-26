@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Cpu, Eye, EyeOff } from 'lucide-react';
+import { Menu, X, Eye, EyeOff } from 'lucide-react';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 
 interface NavbarProps {
@@ -48,10 +48,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             href="#"
             className="group flex items-center gap-3 text-inherit no-underline focus:outline-none"
           >
-            <div className="relative w-9 h-9 rounded-lg bg-void-900 border border-cyan-electric/40 flex items-center justify-center text-cyan-electric shadow-cyan-glow group-hover:border-cyan-electric transition-colors">
-              <Cpu className="w-5 h-5 transition-transform group-hover:scale-110" />
-              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-cyan-electric animate-ping" />
-              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-cyan-electric" />
+            <div className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-cyan-electric/50 shadow-cyan-glow group-hover:border-cyan-electric transition-all">
+              <img
+                src="/safi-portrait.jpg"
+                alt="MD Mobasser Hasan Safi"
+                className="w-full h-full object-cover object-top"
+              />
+              <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 ring-2 ring-void-950" />
             </div>
             <div className="flex flex-col">
               <span className="font-display font-bold text-sm tracking-wide text-metallic-100 group-hover:text-cyan-electric transition-colors">
